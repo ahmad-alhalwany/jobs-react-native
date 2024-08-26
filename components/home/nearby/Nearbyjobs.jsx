@@ -18,14 +18,17 @@ const Nearbyjobs = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Nearby jobs</Text>
-        <TouchableOpacity>
-          <Text style={styles.headerBtn}>Show all</Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => router.push("/all-jobs")}
+        >
+          <Text style={styles.buttonText}>Show all</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.cardsContainer}>
         {isLoading ? (
-          <ActivityIndicator size='large' color={COLORS.primary} />
+          <ActivityIndicator size="large" color={COLORS.primary} />
         ) : error ? (
           <Text>Something went wrong</Text>
         ) : (

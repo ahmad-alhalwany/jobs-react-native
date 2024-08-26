@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, Image, TouchableOpacity, View } from 'react-native'
-import { Stack, useRouter, useSearchParams } from 'expo-router'
+import { Stack, useRouter, useLocalSearchParams } from "expo-router";
 import { Text, SafeAreaView } from 'react-native'
 import axios from 'axios'
 
@@ -9,7 +9,7 @@ import { COLORS, icons, SIZES } from '../../constants'
 import styles from '../../styles/search'
 
 const JobSearch = () => {
-    const params = useSearchParams();
+    const params = useLocalSearchParams();
     const router = useRouter()
 
     const [searchResult, setSearchResult] = useState([]);
@@ -26,9 +26,9 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": '',
-                    "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
-                },
+                    'x-rapidapi-key': '47391376a3msh484570addd5560ap1948f7jsn18fd17f7727b',
+                    'x-rapidapi-host': 'jsearch.p.rapidapi.com'
+                  },
                 params: {
                     query: params.id,
                     page: page.toString(),
