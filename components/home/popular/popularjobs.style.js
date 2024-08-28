@@ -21,6 +21,17 @@ const styles = StyleSheet.create({
     fontFamily: FONT.medium,
     color: COLORS.gray,
   },
+  button: {
+    backgroundColor: COLORS.tertiary,
+    padding: SIZES.small,
+    borderRadius: SIZES.small,
+  },
+  buttonText: {
+    color: COLORS.white,
+    fontFamily: FONT.medium,
+    fontSize: SIZES.medium,
+    textAlign: 'center',
+  },
   cardsContainer: {
     marginTop: SIZES.medium,
   },
